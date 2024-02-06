@@ -1,0 +1,46 @@
+-- database: c:\Users\emerson.leite\projetos_pessoais\sql-labs\teste.db
+-- Use the ▷ button in the top right corner to run the entire file.
+CREATE TABLE
+  customers (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+  );
+
+CREATE TABLE
+  customers2 (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+  );
+
+INSERT INTO
+  customers2 (id, name, email)
+VALUES
+  (1, 'Emerson5', 'emerson.bl+5@gmail.com');
+
+UPDATE customers
+SET
+  email = 'e@g.com'
+WHERE
+  id = 3;
+
+SELECT
+  email
+FROM
+  customers
+WHERE
+  id = 3;
+
+SELECT
+  *
+FROM
+  "customers";
+
+-- Apagando registros nulos
+DELETE FROM "customers"
+WHERE
+  id IS NULL;
+
+--Apagando uma tabela inteira
+DROP TABLE customers2;
